@@ -11519,8 +11519,72 @@ html {
   font-size: 62.5%;
 }
 
+html.dark-mode {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+html.dark-mode img, html.dark-mode .dark-mode-icon, html.dark-mode i, html.dark-mode .pageForm, html.dark-mode .contactItem, html.dark-mode .clientsBackground, html.dark-mode .clients h2, html.dark-mode .clients .h2, html.dark-mode .aboutBackground, html.dark-mode .about h2, html.dark-mode .about .h2, html.dark-mode .pageAboutBackground, html.dark-mode .aboutBar, html.dark-mode .aboutHomeLink {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
 *:focus:not(:focus-visible) {
   outline: none;
+}
+
+.dark-mode-button {
+  position: fixed;
+  right: 15px;
+  top: 90vh;
+  color: #f0c420;
+  width: 50px;
+  height: 50px;
+}
+
+.dark-mode-button .dark-mode-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.homeLink {
+  position: fixed;
+  left: 70px;
+  top: 25px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  z-index: 10;
+}
+
+.homeLink:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.homeLink svg {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutHomeLink {
+  position: fixed;
+  left: 70px;
+  top: 25px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  z-index: 10;
+}
+
+.aboutHomeLink:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.aboutHomeLink svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* Raimbow Scroll */
@@ -12090,10 +12154,14 @@ h2, .h2 {
   }
   60% {
     opacity: 60%;
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
   }
   100% {
     bottom: 100vh;
     opacity: 30%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
@@ -12109,10 +12177,14 @@ h2, .h2 {
   }
   60% {
     opacity: 60%;
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
   }
   100% {
     bottom: 100vh;
     opacity: 30%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
@@ -12178,6 +12250,7 @@ h2, .h2 {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
+  margin-top: 10px;
 }
 
 /* About */
@@ -12195,9 +12268,18 @@ h2, .h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.aboutBackground {
+  height: 100%;
+  width: 100%;
   background-image: url(../images/background.jpg);
   background-attachment: fixed;
-  background-position-y: center;
+  background-position-y: bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .about h2, .about .h2 {
@@ -12206,7 +12288,6 @@ h2, .h2 {
 }
 
 .aboutContainer {
-  border: solid 2px white;
   border-radius: 5px;
   margin-top: 100px;
   background-color: #111;
@@ -12234,7 +12315,6 @@ h2, .h2 {
 
 .aboutContainer img {
   max-width: 70%;
-  border: solid white 2px;
   border-radius: 5px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -12328,8 +12408,18 @@ h2, .h2 {
       align-content: center;
   text-align: center;
   min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.clientsBackground {
+  height: 100%;
+  width: 100%;
   background-image: url(../images/clients.jpg);
   background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .clientsReviews {
@@ -12343,6 +12433,7 @@ h2, .h2 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 100%;
 }
 
 .clientsReviews__review {
@@ -12363,7 +12454,6 @@ h2, .h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: white solid 2px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
@@ -12526,12 +12616,22 @@ h2, .h2 {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   text-align: center;
+  position: relative;
+}
+
+.pageAbout .pageAboutBackground {
+  height: 100%;
+  width: 100%;
   background-image: url(../images/background.jpg);
   background-attachment: fixed;
+  background-position-y: bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .pageAbout h1, .pageAbout .h1 {
-  margin: 100px auto;
+  margin: 50px auto;
 }
 
 .pageAbout p, .pageAbout a {
@@ -12554,7 +12654,6 @@ h2, .h2 {
           justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
-  border: #fff 2px solid;
   border-radius: 10px;
   margin: auto;
   text-align: center;
@@ -12578,7 +12677,6 @@ h2, .h2 {
 
 .pageAbout .pageAboutContainer .pageAboutImage img {
   max-height: 500px;
-  border: #fff 2px solid;
   border-radius: 5px;
 }
 
@@ -12655,7 +12753,6 @@ h2, .h2 {
   max-width: 500px;
   border: #fff 2px solid;
   border-radius: 10px;
-  margin: auto;
   text-align: center;
   padding: 20px;
   -webkit-transition: 0.2s ease-in-out;
@@ -12795,13 +12892,14 @@ h2, .h2 {
 }
 
 .pageError .pageErrorContainer h1, .pageError .pageErrorContainer .h1 {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .pageError .pageErrorContainer p {
   color: #fff;
   font-size: 2rem;
-  margin-top: 100px;
+  margin: 50px auto;
+  padding: 10px;
 }
 
 /* Media Queris*/
@@ -12856,6 +12954,15 @@ h2, .h2 {
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
   }
+  .clientsReviews__review {
+    margin: 100px auto;
+  }
+  .pageAbout .pageAboutContainer {
+    width: 80%;
+  }
+  .pageAbout .pageAboutContainer .pageAboutImage img {
+    max-width: 80%;
+  }
   .pagePortfolio .pagePortfolioContainer {
     width: 100%;
   }
@@ -12896,6 +13003,10 @@ h2, .h2 {
 }
 
 @media only screen and (max-width: 800px) {
+  .homeLink {
+    display: none;
+    visibility: unset;
+  }
   .homeTittle h1, .homeTittle .h1 {
     margin-bottom: 0;
     margin-top: 100px;
@@ -12924,6 +13035,12 @@ h2, .h2 {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
+  }
+  .clientsReviews {
+    padding: 20px;
+  }
+  .clientsReviews__review {
+    margin: 100px auto;
   }
   .pageForm .form {
     width: 95%;
@@ -12957,6 +13074,7 @@ h2, .h2 {
   }
   .pageAbout .pageAboutContainer .button {
     width: 80%;
+    padding: 7px 20px;
   }
   .pageServices .pageServicesContainer {
     display: -webkit-box;
@@ -12979,6 +13097,10 @@ h2, .h2 {
   }
   .pageServices .pageServicesContainer .pageServicesItem img {
     width: 80%;
+  }
+  .pageError .pageErrorContainer img {
+    max-width: 60%;
+    margin: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
