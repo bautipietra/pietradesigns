@@ -13102,6 +13102,17 @@ h2, .h2 {
     max-width: 60%;
     margin: auto;
   }
+  html.dark-mode .aboutHomeLink, html.dark-mode .aboutBar {
+    -webkit-filter: invert(0%);
+            filter: invert(0%);
+  }
+  .dark-mode-button {
+    top: 85vh;
+  }
+  .custom-shape-divider-bottom-1627790686 {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media only screen and (max-height: 800px) {
