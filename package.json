@@ -1,0 +1,29 @@
+{
+  "name": "pietradesigns",
+  "version": "1.0.0",
+  "description": "Portafolio freelance realizado para la carrera de desarrollo web de Coder House",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bautipietra/pietradesigns.git"
+  },
+  "keywords": [
+    "pietradesigns",
+    "desarrollador",
+    "web",
+    "freelance"
+  ],
+  "author": "Bautista Pietraroia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bautipietra/pietradesigns/issues"
+  },
+  "homepage": "https://github.com/bautipietra/pietradesigns#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  }
+}

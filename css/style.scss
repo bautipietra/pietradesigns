@@ -368,7 +368,6 @@ body
 
 #bpme {
     height: 400px;
-    border: solid 2px white;
     border-radius: 5px;
 }
 
@@ -832,6 +831,10 @@ h2 {
     transform: translateY(-20%);
 }
 
+.clients h2 {
+    margin: 100px auto 50px auto;
+}
+
 .clientsReviews__review p, .clientsReviews__review h5, .clientsReviews__review h6 {
     max-width: 50%;
     min-width: 200px;
@@ -910,6 +913,10 @@ h2 {
             text-align: center;
             padding: 20px;
             transition: 0.2s ease-in-out;
+            padding-top: 70px;
+            h2 {
+                margin-top: 50px;
+            }
         }
         .pageServicesItem:hover {
             transform: scale(1.01);
@@ -1342,6 +1349,10 @@ h2 {
 
 @media only screen and (max-height: 800px) {
     .aside-content__footer {
+        visibility: hidden;
+    }
+    .custom-shape-divider-bottom-1627790686 {
+        display: none;
         visibility: hidden;
     }
 }
